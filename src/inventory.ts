@@ -13,7 +13,7 @@ function calcInventoryValue(inventory:InventoryItem[]) : number {
     if(inventory.length > 0){
         let sum = 0;
         for(let i = 0; i < inventory.length; i++){
-            sum += inventory[i].price;
+            sum += inventory[i].product.price * inventory[i].quantity
         }
             return sum; }
     else {
